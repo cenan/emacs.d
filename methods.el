@@ -16,3 +16,11 @@
 	(e (if mark-active (max (point) (mark)) (point-max))))
     (shell-command-on-region b e
 			     "python -mjson.tool" (current-buffer) t)))
+
+(defun eshell-goto-current-dir (&optional arg)
+      (interactive "P")
+      (let ((dir default-directory))
+        (eshell arg)
+        (eshell/cd dir)))
+
+(global-set-key "\C-cs" 'eshell-goto-current-dir)

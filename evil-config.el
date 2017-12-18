@@ -9,7 +9,7 @@
 (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
 (define-key evil-insert-state-map (kbd "C-c") 'evil-normal-state)
 (define-key evil-visual-state-map (kbd "C-c") 'evil-normal-state)
-(define-key evil-normal-state-map (kbd ",f") 'projectile-find-file)
+(define-key evil-normal-state-map (kbd ",f") 'helm-projectile-find-file)
 (define-key evil-normal-state-map (kbd ",w") 'kill-buffer-and-window)
 (define-key evil-normal-state-map (kbd ",e") 'eval-region)
 (define-key evil-visual-state-map (kbd ",e") 'eval-region)

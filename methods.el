@@ -7,7 +7,7 @@
 (defun shortcuts ()
     "Open shortcuts help file."
   (interactive)
-  (find-file "~/Dropbox/docs/emacs-shortcuts"))
+  (find-file "~/Documents/org/emacs-shortcuts"))
 
 (defun beautify-json ()
   "Beautify JSON in selection."

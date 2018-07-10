@@ -1,3 +1,6 @@
+(require 'tabbar)
+(tabbar-mode 1)
+
 (custom-set-variables
  '(tabbar-separator '(1)))
 (defun my-tabbar-buffer-groups ()
@@ -6,6 +9,12 @@
 	      (t "user"))))
 
 (setq tabbar-buffer-groups-function 'my-tabbar-buffer-groups)
+
+;; disable org mode shortcuts for alt-left and alt-right
+;; https://emacs.stackexchange.com/a/20238/17353
+(with-eval-after-load "org"
+  (define-key org-mode-map [M-left] nil)
+  (define-key org-mode-map [M-right] nil))
 
 (global-set-key [M-left]  'tabbar-backward-tab)
 (global-set-key [M-right] 'tabbar-forward-tab)

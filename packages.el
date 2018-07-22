@@ -1,8 +1,8 @@
 (setq package-list '(evil tabbar neotree magit editorconfig
 			  auto-complete evil-mc monokai-theme
 			  projectile rjsx-mode all-the-icons
-			  crystal-mode helm helm-projectile
-			  go-mode rjsx-mode js2-mode))
+			  crystal-mode helm helm-projectile helm-ag
+			  go-mode rjsx-mode js2-mode emmet-mode))
 
 (package-initialize)
 (require 'package)

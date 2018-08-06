@@ -14,3 +14,6 @@
 ; invalidate the cache prior to prompting you for a file to jump to.
 ; C-u C-c p f
 
+(add-to-list 'projectile-globally-ignored-directories "node_modules")
+(add-to-list 'projectile-globally-ignored-directories ".git")
+

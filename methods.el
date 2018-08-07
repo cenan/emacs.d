@@ -24,3 +24,16 @@
         (eshell/cd dir)))
 
 (global-set-key "\C-cs" 'eshell-goto-current-dir)
+
+(defun dired-w32explore ()
+  "Open Windows Explorer to current file or folder."
+  (interactive)
+  (w32explore (dired-get-filename nil t)))
+(eval-after-load "dired"
+  '(define-key dired-mode-map [f12] 'dired-w32explore))
+
+;; Source: http://www.emacswiki.org/emacs-en/download/misc-cmds.el
+(defun revert-buffer-no-confirm ()
+  "Revert buffer without confirmation."
+  (interactive)
+  (revert-buffer :ignore-auto :noconfirm))

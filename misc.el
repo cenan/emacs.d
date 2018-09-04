@@ -37,6 +37,8 @@
 
 ;; (line-number-mode 1)
 (global-display-line-numbers-mode)
+; show 3 digits on the line number gutter
+(setq-default display-line-numbers-width 3)
 
 (setq scroll-step 1)
 ; Highlight matching paranthesis

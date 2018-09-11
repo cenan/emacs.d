@@ -5,7 +5,7 @@
  '(tabbar-separator '(1)))
 (defun my-tabbar-buffer-groups ()
   (list (cond ((string-equal "*" (substring (buffer-name) 0 1)) "emacs")
-	      ((string-equal "magit:" (substring (buffer-name) 0 6)) "magit")
+	      ((string-equal "magit" (substring (buffer-name) 0 5)) "magit")
 	      ((eq major-mode 'dired-mode) "emacs")
 	      (t "user"))))
 

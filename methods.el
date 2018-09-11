@@ -4,6 +4,11 @@
   (find-file "~/.emacs"))
 (define-key evil-normal-state-map (kbd ",v") 'open-dot-emacs)
 
+(defun things ()
+    "Open things file."
+  (interactive)
+  (find-file "~/Documents/org/things.org"))
+
 (defun shortcuts ()
     "Open shortcuts help file."
   (interactive)

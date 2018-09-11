@@ -37,3 +37,6 @@
   "Revert buffer without confirmation."
   (interactive)
   (revert-buffer :ignore-auto :noconfirm))
+
+; (define-key evil-normal-state-map (kbd ",r") 'revert-buffer-no-confirm)
+(global-set-key (kbd "<f5>") 'revert-buffer-no-confirm)

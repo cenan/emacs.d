@@ -1,4 +1,4 @@
-(setq projectile-mode-line '(:eval (format " PRJ[%s]" (projectile-project-name))))
+(setq projectile-mode-line '(:eval (format " π[%s]" (projectile-project-name))))
 (setq projectile-switch-project-action 'neotree-projectile-action)
 (require 'projectile)
 (projectile-global-mode +1)

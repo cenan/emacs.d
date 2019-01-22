@@ -17,7 +17,7 @@
 
 (require 'evil-mc)
 (global-evil-mc-mode 1)
-(setq evil-mc-mode-line-prefix "cCc")
+(setq evil-mc-mode-line-prefix "X|")
 ; evil-mc-undo-all-cursors
 ; C-n C-p create cursors
 ; M-n M-p cycle cursors

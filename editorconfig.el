@@ -1,5 +1,5 @@
 (require 'editorconfig)
 
 (editorconfig-mode 1)
-(setq editorconfig-mode-lighter " edcnf")
+(setq editorconfig-mode-lighter " ɘↄ")
 

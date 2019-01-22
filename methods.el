@@ -45,3 +45,13 @@
 
 ; (define-key evil-normal-state-map (kbd ",r") 'revert-buffer-no-confirm)
 (global-set-key (kbd "<f5>") 'revert-buffer-no-confirm)
+
+(defun select-font-dialog ()
+  (interactive)
+  (insert (prin1-to-string (w32-select-font))))
+
+(defun wsl-shell ()
+  "Runs wsl shell."
+  (interactive)
+  (let ((explicit-shell-file-name "C:/Windows/System32/bash.exe"))
+    (call-interactively 'shell)))

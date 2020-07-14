@@ -1,5 +1,5 @@
 ; start emacs maximized
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
+; (add-to-list 'default-frame-alist '(fullscreen . maximized))
 					;
 ; windowsta neotree'yi hizlandirmak icin
 (setq inhibit-compacting-font-caches t)
@@ -31,7 +31,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 (setq inhibit-startup-screen t)
-(menu-bar-mode 0)
+(menu-bar-mode 1)
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 
@@ -47,7 +47,8 @@
 (setq visibile-bell 1)
 (global-hl-line-mode +1)
 
-(load-theme 'monokai t)
+;; (load-theme 'monokai t)
+(load-theme 'chocolate t)
 
 (setq auto-save-default nil)
 
@@ -56,3 +57,4 @@
 
 (global-set-key (kbd "<f5>") 'revert-buffer)
 
+(global-flycheck-mode)

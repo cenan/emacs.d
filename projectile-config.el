@@ -16,4 +16,4 @@
 
 (add-to-list 'projectile-globally-ignored-directories "node_modules")
 (add-to-list 'projectile-globally-ignored-directories ".git")
-
+(define-key evil-normal-state-map (kbd ",t") 'projectile-test-project)

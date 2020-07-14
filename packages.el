@@ -1,8 +1,11 @@
-(setq package-list '(evil tabbar neotree magit editorconfig
-			  auto-complete evil-mc monokai-theme
+(setq package-list '(evil neotree magit editorconfig
+			  auto-complete evil-mc
 			  projectile rjsx-mode all-the-icons
+			  flycheck centaur-tabs chocolate-theme
 			  crystal-mode helm helm-projectile helm-ag
 			  go-mode rjsx-mode js2-mode emmet-mode))
+;; removed packages:
+;; tabbar monokai-theme
 
 (package-initialize)
 (require 'package)

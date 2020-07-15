@@ -1,7 +1,11 @@
 (defun co/open-dot-emacs ()
   "Open .emacs config file."
   (interactive)
-  (find-file "~/.emacs"))
+  (cond
+   ((string-equal "darwin" system-type)
+    (find-file "~/Library/Preferences/Aquamacs Emacs/Preferences.el"))
+   ((string-equal "windows-nt" system-type)
+    (find-file "~/.emacs"))))
 (define-key evil-normal-state-map (kbd ",v") 'co/open-dot-emacs)
 
 (defun co/things ()

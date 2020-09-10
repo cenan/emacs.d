@@ -52,18 +52,24 @@
 (global-set-key (kbd "<f5>") 'co/revert-buffer-no-confirm)
 
 (defun co/select-font-dialog ()
+  "Open font selection dialog."
   (interactive)
   (insert (prin1-to-string (w32-select-font))))
 
 (defun co/wsl-shell ()
-  "Runs wsl shell."
+  "Run wsl shell."
   (interactive)
   (let ((explicit-shell-file-name "C:/Windows/System32/bash.exe"))
     (call-interactively 'shell)))
 
 (defun co/open-scratch-buffer ()
-  "Opens the scratch buffer"
+  "Opens the scratch buffer."
   (interactive)
   (switch-to-buffer "*scratch*"))
+
+(defun co/insert-guid ()
+  "Insert a new guid into buffer."
+  (interactive)
+  (insert (replace-regexp-in-string "\n$" "" (shell-command-to-string "uuidgen"))))
 
 (define-key evil-normal-state-map (kbd ",s") 'co/open-scratch-buffer)
